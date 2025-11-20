@@ -24,9 +24,21 @@ export default function Home() {
 
       <main className="mx-auto max-w-7xl px-4 py-8">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">Comunicación de Datos</h1>
-          <p className="text-muted-foreground">Herramientas para cálculos de RF y telecomunicaciones</p>
+          <div className="flex items-center gap-3 mb-2">
+            <img
+              src="/logo.jpg"
+              alt="DataFlow Logo"
+              className="h-10 w-auto"  // aquí controlas el tamaño del logo
+            />
+            <h1 className="text-4xl font-bold text-foreground">
+              DataFlow
+            </h1>
+          </div>
+          <p className="text-muted-foreground">
+            Herramientas para cálculos de RF y telecomunicaciones
+          </p>
         </div>
+
 
         {/* Module Navigation */}
         <div className="flex gap-2 mb-8 overflow-x-auto pb-4">

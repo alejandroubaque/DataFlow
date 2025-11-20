@@ -1,15 +1,19 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
+import type { Metadata } from "next"
+import { Geist, Geist_Mono } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
+import "./globals.css"
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const _geist = Geist({ subsets: ["latin"] })
+const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'DataFlow',
-  generator: 'DataFlow',
-
+  title: "DataFlow",
+  generator: "DataFlow",
+  icons: {
+    icon: "/logo.jpg",        // favicon normal
+    shortcut: "/logo.jpg",    // para algunos navegadores
+    apple: "/logo.jpg",       // icono en iOS
+  },
 }
 
 export default function RootLayout({
@@ -18,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
